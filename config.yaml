@@ -1,0 +1,28 @@
+# **************************************
+# * Parameters for metprofile pipeline *
+# **************************************
+
+list_files: "/bulk/IMCshared_bulk/sycuro_shared_projects/IMPACTT_benchmarking/IMPACTT_sample_handling/shotgun/2022_09_09/analysis/list_files.txt"
+
+
+# Path to sequences
+path: "/bulk/IMCshared_bulk/sycuro_shared_projects/IMPACTT_benchmarking/IMPACTT_sample_handling/shotgun/2022_09_09/analysis/metqc/output/bmtagger/"
+
+output_dir: "output"
+
+# Metaphlan bowtie2 database.
+metaphlan_database: "/bulk/IMCshared_bulk/shared/dbs/metaphlan4"
+
+# Nthreads metaphlan can use
+threads: 8
+
+# Are reads paired?
+paired: TRUE
+
+# If paired-end reads, suffix for forward reads
+for: "_bmtagged_1.fastq"
+# If paired-end reads, suffix for reverse reads
+rev: "_bmtagged_2.fastq"
+
+# If unpaired reads, suffix for reads
+suff: "_bmt_merged_ELC_trimmed_filtered.fastq"

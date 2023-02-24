@@ -1,0 +1,30 @@
+{
+  "__default__" :
+  {
+    "name": "metaphlan.{rule}.{wildcards}",
+    "partition": "synergy",
+    "nodes": 1,
+    "ntasks": 1,
+    "cpus-per-task": 8,
+    "time" : "02:00:00",
+    "mem" : 38G,
+    "output" : "logs/{rule}.{wildcards}.out",
+    "error" : "logs/{rule}.{wildcards}.err"
+  },
+
+  "mergeprofiles" :
+  {
+    "time" : "02:00:00"
+  },
+  
+  "metaphlan" :
+  {
+    "time" : "02:00:00"
+  },
+
+  "heatmap" :
+  {
+    "time" : "02:00:00"
+  },
+
+}
