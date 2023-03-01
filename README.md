@@ -4,6 +4,12 @@ Snakemake pipeline for profiling composition of microbial communities from metag
 
 ## Overview
 
+Tested with:
+
+conda >= 4.11.0 
+
+snakemake version >= 7.12.1 
+
 Input: 
 
 * Cleaned and filtered reads from shotgun metagenome sequencing (specify whether reads are paired or unpaired in the config file
