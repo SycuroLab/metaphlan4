@@ -1,4 +1,4 @@
-# metaphlan
+# Metaphlan4
 
 Snakemake pipeline for profiling composition of microbial communities from metagenomic shotgun sequencing data using [MetaPhlAn4](https://www.nature.com/articles/s41587-023-01688-w).
 
