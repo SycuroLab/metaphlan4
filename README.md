@@ -1,6 +1,6 @@
 # metaphlan
 
-Snakemake pipeline for profiling composition of microbial communities from metagenomic shotgun sequencing data using [MetaPhlAn3](https://www.nature.com/articles/nmeth.3802).
+Snakemake pipeline for profiling composition of microbial communities from metagenomic shotgun sequencing data using [MetaPhlAn4](https://www.nature.com/articles/s41587-023-01688-w).
 
 ## Overview
 
@@ -10,16 +10,16 @@ Input:
 
 Output: 
 
-* Table of microbial taxa and their **raw** abundance for each sample, `output/merged_abundance_table.txt`
-* Abundance table at species level, `merged_abundance_table_species.txt`
+* Table of microbial taxa and their **raw** abundance for each sample, `merged_abundance_table.txt, merged_abundance_table_relab.txt, merged_abundance_table_GTDB.txt,merged_abundance_table_GTDB.txt`
+* Abundance table at species level, `merged_abundance_table_species.txt, merged_abundance_table_species_relab.txt, merged_abundance_table_species_GTDB.txt, merged_abundance_table_species_GTDB_relab.txt`
 
 ## Pipeline summary
 
 ### Steps
 
-1) Profile microbial clades and their abundances using MetaPhlAn3. This step generates a profile of species abundances present in each sample.
+1) Profile microbial clades and their abundances using MetaPhlAn4. This step generates a profile of species abundances present in each sample.
 
-2) Merge profiles. This step combines all the output files from MetaPhlAn3 into one table.
+2) Merge profiles. This step combines all the output files from MetaPhlAn4 into one table.
 
 3) Individual sample profile has both raw and relative abundance values so if needed relative abundances can be merged also.
 
@@ -28,10 +28,10 @@ Output:
 To use this pipeline, navigate to your project directory and clone this repository into that directory using the following command:
 
 ```
-git clone https://github.com/SycuroLab/metaphlan.git metaphlan
+git clone git@github.com:SycuroLab/metaphlan4.git
 ```
 
-Note: you need to have **conda** and **snakemake** installed in order to run this. To install conda, see the instructions [here](https://github.com/ucvm/synergy/wiki). 
+Note: you need to have **conda** and **snakemake** installed in order to run this.  
 
 To install snakemake using conda, run the following line:
 
