@@ -19,9 +19,11 @@ Output:
 
 1) Profile microbial clades and their abundances using MetaPhlAn4. This step generates a profile of species abundances present in each sample.
 
-2) Merge profiles. This step combines all the output files from MetaPhlAn4 into one table.
+2) Merge profiles. This step combines all the output files from MetaPhlAn4 into one table. If you have sample data from multiple lanes, you will have to concatenate 
 
-3) Individual sample profile has both raw and relative abundance values so if needed relative abundances can be merged also.
+3) Individual sample profile has both raw and relative abundance values
+
+4) SGB based taxonomy is changed to GTDB and all samples are merged. 
 
 ## Installation
 
@@ -97,7 +99,7 @@ Location:
 `arc.ucalgary.ca`
 
 Directory Path: 
-`/bulk/IMCshared_bulk/shared/dbs/metaphlan3`
+`/bulk/IMCshared_bulk/shared/dbs/metaphlan4`
 
 If there is a newer version of the database that you want to use for your project you can download the newer version;
 
@@ -124,7 +126,7 @@ Place this path in the `metaphlan_database` parameter in the `config.yaml` file.
 
 ## Known Issues
 
-1) Sometimes the pipeline fails with the every first metaphlan command exiting. A possible problem can be with the execute permissions not set in the conda envirnoment bin forlder for metaphlan. You can check this by 
+1) Sometimes the pipeline fails with the very first metaphlan command exiting. A possible problem can be with the execute permissions not set in the conda envirnoment bin forlder for metaphlan. You can check this by 
  ``` ls -l .snakemake/conda/<ENV_name>/bin/metaphlan ```. 
  Once in the bin folder, you can change the permissions by ```chmod u+x *``` to change the permissions for all executables in the bin folder.
-2) The location of the downloaded chocophlan database that metaphlan needs is ```.snakemake/conda/<ENV_name>/lib/python3.7/site-packages/metaphlan/metaphlan_databases/```. It has happened in the past that some files are missing so this would be the place to check
+2) If you downloaded the database yourself, The location of the downloaded chocophlan database that metaphlan needs is ```.snakemake/conda/<ENV_name>/lib/python3.7/site-packages/metaphlan/metaphlan_databases/```. It has happened in the past that some files are missing so this would be the place to check
