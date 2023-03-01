@@ -109,22 +109,22 @@ Directory Path:
 
 If there is a newer version of the database that you want to use for your project you can download the newer version;
 
-1. Install the metaphlan 3 conda environment. Requires conda please see conda installation instructions above.
+1. Install the metaphlan4  conda environment. Requires conda please see conda installation instructions above.
 ```
-conda env create --file metaphlan3_env.yaml 
+conda env create --file metaphlan4.yaml 
 ```
-2. Activate the metaphlan3 conda environment.
+2. Activate the metaphlan4 conda environment.
 ```
-conda activate metaphlan3
+conda activate metaphlan4
 ```
-3. Download and install metaphlan database.
+3. Download and install metaphlan4 database.
 ```
 metaphlan --install
 ```
 
 After installation the database should be located in the following directory.
 ```
-/home/<username>/miniconda3/envs/metaphlan3/lib/python3.7/site-packages/metaphlan/metaphlan_databases
+/home/<username>/miniconda3/envs/metaphlan4/lib/python3.7/site-packages/metaphlan/metaphlan_databases
 ```
 
 Place this path in the `metaphlan_database` parameter in the `config.yaml` file.
