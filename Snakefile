@@ -44,7 +44,7 @@ rule metaphlan:
             "metaphlan -t rel_ab_w_read_stats --unclassified_estimation {input.reads} --input_type fastq "
             "--bowtie2db {params.metaphlan_database} --bowtie2out {output.bt} --nproc {params.threads} -o {output.pr}"
 
-
+# sgb_to_gtdb_profile.py is a python script that is available with metaphlan4
 rule sgb_to_GTDB:
     input:
          sg=config["output_dir"] + "/metaphlan/{sample}_profile.txt"
